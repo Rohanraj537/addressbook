@@ -1,21 +1,15 @@
 pipeline {
-    agent any
-    stages {
-        stage('Compile') {
-            steps { 
-                sh 'mvn compile'
-            }
-        }
-        stage('test') {
-            steps { 
-                sh 'mvn test'
-            }
-        }
-                stage('package') {
-            steps { 
-                sh 'mvn package'
-            }
-        }
-      
-    }
+ agent any
+ stages {
+  stage ('compile the application') {
+   steps {
+    sh 'mvn compile'
+   }
+  }
+  stage ('Test code') {
+   steps {
+    sh 'mvn test'
+   }
+  }
+   }
 }
