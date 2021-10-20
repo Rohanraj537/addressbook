@@ -1,0 +1,15 @@
+pipeline {
+ agent any
+ stages {
+  stage ('compile the application') {
+   steps {
+        mvn compile
+   }
+  }
+  stage ('Test code') {
+   steps {
+        mvn test
+   }
+  }
+   }
+}
