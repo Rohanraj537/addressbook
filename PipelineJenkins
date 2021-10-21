@@ -3,12 +3,12 @@ pipeline {
  stages {
   stage ('compile the application') {
    steps {
-        bash -c "mvn compile"
+        bat "mvn compile"
    }
   }
   stage ('Test code') {
    steps {
-        bash -c "mvn test"
+       bat "mvn test"
    }
   }
    }
