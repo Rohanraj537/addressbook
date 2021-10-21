@@ -1,9 +1,19 @@
 pipeline {
  agent any
  stages {
-  stage ('SAMPLE_COMPILE_VIEW') {
+  stage ('Compile project') {
    steps {
         bat "mvn compile"
+   }
+  }
+  stage ('Test the project') {
+   steps {
+        bat "mvn Test"
+   }
+  }
+  stage ('Package the project') {
+   steps {
+        bat "mvn package"
    }
   }
 }
