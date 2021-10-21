@@ -1,0 +1,10 @@
+pipeline {
+ agent any
+ stages {
+  stage ('Compile project') {
+   steps {
+        copy C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\Package\addressbook_main\target\addressbook.war C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps
+   }
+  }
+ }
+}
