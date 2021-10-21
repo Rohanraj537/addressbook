@@ -3,12 +3,12 @@ pipeline {
  stages {
   stage ('compile the application') {
    steps {
-        bash mvn compile
+        bash 'mvn compile'
    }
   }
   stage ('Test code') {
    steps {
-        bash mvn test
+        bash 'mvn test'
    }
   }
    }
