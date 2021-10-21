@@ -8,7 +8,7 @@ pipeline {
   }
   stage ('Test the project') {
    steps {
-        bat "mvn Test"
+        bat "mvn test"
    }
   }
   stage ('Package the project') {
